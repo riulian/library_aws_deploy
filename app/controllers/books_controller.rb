@@ -100,9 +100,9 @@ class BooksController < ApplicationController
 
   def return_a_book #get
     @scop1= Book.order(:title).joins(:books_users).where(books_users: {status: "rented"} )
-    #@scop1= Book.order(:title).joins(:books_users).where(user_id: current_user.id).where(books_users: {status: "rented"})
+    
   end  
-  def returnabook #post
+  def returnabook #post 
     @book = Book.find_by id: book_params1[:book_id]
     if !@book
         redirect_to books_return_a_book_path , notice: "Please select correctly!"
