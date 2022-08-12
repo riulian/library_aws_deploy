@@ -1,0 +1,22 @@
+<%= form_with  url: books_rentabookrented_path, :method => :post, data: {turbo: false}  do |form| %>
+
+    <h3>Choose a book</h3>
+        <div class="form-group">
+            <div><%= form.collection_radio_buttons :book_id, @scop1, :id, :title %></div>
+           
+        </div></br>
+        <h3>Choose a User</h3>
+    <div class="form-group">
+            <%= form.collection_radio_buttons :user_id, @scop2, :id, :email %>
+           
+        </div></br>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <div class="actions">
+  
+    <%= form.submit  value="Rent",class: "btn btn-primary"%>&nbsp&nbsp&nbsp&nbsp
+   
+    <%= link_to "Back", books_path, class: "btn btn-primary" %>
+  </div>
+<% end %>
+<br />
