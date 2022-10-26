@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/faker-ruby/faker.git
+  revision: b00901afae6a9590661c4930684ccb8f2aa8a176
+  branch: main
+  specs:
+    faker (2.23.0)
+      i18n (>= 1.8.11, < 2)
+
+GIT
   remote: https://github.com/heartcombo/devise.git
   revision: 6d32d2447cc0f3739d9732246b5a5bde98d9e032
   branch: main
@@ -9,6 +17,23 @@ GIT
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+
+GIT
+  remote: https://github.com/kaminari/kaminari
+  revision: bf20fccfdbf7d10c337aeead7ecf4f54a230a5fb
+  specs:
+    kaminari (1.2.2)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.2)
+      kaminari-activerecord (= 1.2.2)
+      kaminari-core (= 1.2.2)
+    kaminari-actionview (1.2.2)
+      actionview
+      kaminari-core (= 1.2.2)
+    kaminari-activerecord (1.2.2)
+      activerecord
+      kaminari-core (= 1.2.2)
+    kaminari-core (1.2.2)
 
 GEM
   remote: https://rubygems.org/
@@ -208,7 +233,9 @@ DEPENDENCIES
   bootsnap
   debug
   devise!
+  faker!
   jbuilder
+  kaminari!
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.3, >= 7.0.3.1)

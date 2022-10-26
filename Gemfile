@@ -13,8 +13,8 @@ gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 gem "sprockets-rails"
 
 # Use postgresql as the database for Active Record
-#gem "pg", "~> 1.1"
-gem 'pg', '~> 1.4', '>= 1.4.3'
+gem "pg", "~> 1.1"
+#gem 'pg', '~> 1.4', '>= 1.4.3'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -59,7 +59,10 @@ group :development do
   # gem "spring"
 end
 group :production do
-  gem 'pg', '~> 1.4', '>= 1.4.3'
+  #gem 'pg', '~> 1.4', '>= 1.4.3'   # activez asta daca vreau pe heroku si pun aceeasi versiune de pg si in productie pt ca altfel nu merge
   #gem 'rails_12factor', '~> 0.0.3'
 end
 gem 'devise', github: 'heartcombo/devise', branch: 'main'
+#gem 'faker', '~> 1.6', '>= 1.6.6'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
+gem 'kaminari', :git => 'https://github.com/kaminari/kaminari'

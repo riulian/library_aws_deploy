@@ -1,12 +1,13 @@
 <%= form_with  url: books_rentabookrented_path, :method => :post, data: {turbo: false}  do |form| %>
 
-    <h3>Choose a book</h3>
-        <div class="form-group">
-            <div><%= form.collection_radio_buttons :book_id, @scop1, :id, :title %></div>
+    <h3  style="color:#0965e6;position:absolute;">Choose a book</h3>
+    <h3  style="color:#0965e6;position:absolute;width:40%;left: 60%;">Choose a User</h3>
+        <div class="form-group" style="width: 100%;position:relative;top: 50px;">
+            <div  style="color:#0965e6;position:absolute;width:40%;"><%= form.collection_radio_buttons :book_id, @scop1, :id, :title %></div>
            
         </div></br>
-        <h3>Choose a User</h3>
-    <div class="form-group">
+       </br> 
+    <div class="form-group"  style="color:#0965e6;position:relative;width:40%;left: 50%;">
             <%= form.collection_radio_buttons :user_id, @scop2, :id, :email %>
            
         </div></br>

@@ -1,5 +1,3 @@
-All project requirements have been met. I implemented the login logic with Devise gem. Then in the "home" controller I made it possible to add users. There are several records in seed.rb. The rest of the actions are done in the Books controller. The database is Postgresql. And the project was also uploaded on heroku.
-
 
 https://books-for-rent.herokuapp.com/
 

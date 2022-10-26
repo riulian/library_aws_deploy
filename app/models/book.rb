@@ -1,5 +1,5 @@
 class Book < ApplicationRecord
-    
+    paginates_per 10
     validates :title, presence: true,uniqueness: true
     has_many :books_users
     has_many :users, through: :books_users

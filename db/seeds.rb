@@ -5,8 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-    Book.delete_all
-    User.delete_all
+
+=begin
     b=Book.create([{ title: "Book 1" }, {title: "Book 2" },{title: "Book 3"},
         {title: "Book 4"},{title: "Book 5"},{title: "Book 6"},{title: "Book 7"},{title: "Book 8"},{title: "Book 9"}])
    
@@ -20,4 +20,23 @@
             { email: "7@7.com",password: '111111',password_confirmation: '111111',role: 0 },
             { email: "8@8.com",password: '111111',password_confirmation: '111111',role: 0 },
             { email: "9@9.com",password: '111111',password_confirmation: '111111',role: 0 }])
-                
+            
+=end
+
+Book.delete_all
+User.delete_all
+require "faker"
+a=0
+u=User.new(email: Faker::Internet.email,password: '111111',password_confirmation: '111111',role: 1)
+u.save
+100.times do
+    
+    b=Book.new(title: Faker::Book.title)
+    b.save
+    if a==1
+        u=User.new(email: Faker::Internet.email,password: '111111',password_confirmation: '111111',role: 0)
+        u.save
+    end
+    a=1    
+end
+

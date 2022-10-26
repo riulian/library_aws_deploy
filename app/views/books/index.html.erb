@@ -1,6 +1,7 @@
 
 
-<h1>Books</h1>
+<h1 style="color:#0965e6;">Books</h1>
+<%= paginate @books, params: {controller: 'books', action: 'index', format: :turbo_stream} %>
 
 <div id="books">
 
@@ -30,7 +31,9 @@
   </tbody>
   </table>
 </div>
+<%= paginate @books, params: {controller: 'books', action: 'index', format: :turbo_stream} %></br>
 
-<%= link_to "New book", new_book_path %>
+
+<%= link_to "New book", new_book_path, class: "btn btn-primary" %>
 
 
