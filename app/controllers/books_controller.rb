@@ -1,15 +1,23 @@
 class BooksController < ApplicationController
   before_action :set_book, only: %i[ show edit update destroy ]
-  #after_action :strongp, only: %i[index]
+  
 
   # GET /books or /books.json
   def index
-   
-    @books = Book.order(:title).page params[:page]
-    
+      
+    #@books = Book.order(:title).page params[:page]
+      
+      @q = Book.ransack(params[:q])
+      @books = @q.result(distinct: true).page params[:page]
+        
+       
     #render json:JSON.pretty_generate( @book.as_json(:include => { :books => { :only => [:title] }}))
     #render json: @books
   end
+  def search
+    @q = Book.ransack(params[:q])
+    @books = @k.result(distinct: true)
+  end  
 
   # GET /books/1 or /books/1.json
   def show
@@ -147,13 +155,6 @@ class BooksController < ApplicationController
     def book_params1
       params.permit(:book_id ,:user_id)
     end
-    def strongp
-      params.permit(:page)
-      p "start"
-      p params[:page]
-      p params[:per]
-      p "end"
-      
-    end      
+   
    
 end

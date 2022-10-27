@@ -1,7 +1,15 @@
-
+<%= search_form_for @q do |f|%>
+  <div style="width:30%;" class="form-group">
+    
+    <%= f.text_field :title_cont, class: "form-control", placeholder: "Search"%>
+      
+    <%=f.submit 'Search books', class: "btn btn-primary" %>
+  </div> 
+ 
+<%end%>
 
 <h1 style="color:#0965e6;">Books</h1>
-<%= paginate @books, params: {controller: 'books', action: 'index', format: :turbo_stream} %>
+<%= paginate @books, params: {controller: 'books', action: 'index', data: {turbo: false}} %>
 
 <div id="books">
 
@@ -31,7 +39,7 @@
   </tbody>
   </table>
 </div>
-<%= paginate @books, params: {controller: 'books', action: 'index', format: :turbo_stream} %></br>
+<%= paginate @books, params: {controller: 'books', action: 'index', data: {turbo: false}} %></br>
 
 
 <%= link_to "New book", new_book_path, class: "btn btn-primary" %>

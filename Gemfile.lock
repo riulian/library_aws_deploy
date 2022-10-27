@@ -1,4 +1,14 @@
 GIT
+  remote: https://github.com/activerecord-hackery/ransack.git
+  revision: 04ee9a362d12d8c84171cef8fbf10d472d50f9bd
+  branch: main
+  specs:
+    ransack (3.2.1)
+      activerecord (>= 6.1.5)
+      activesupport (>= 6.1.5)
+      i18n
+
+GIT
   remote: https://github.com/faker-ruby/faker.git
   revision: b00901afae6a9590661c4930684ccb8f2aa8a176
   branch: main
@@ -239,6 +249,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.3, >= 7.0.3.1)
+  ransack!
   sprockets-rails
   tzinfo-data
   web-console
