@@ -1,12 +1,27 @@
-<%= search_form_for @q do |f|%>
-  <div style="width:30%;" class="form-group">
+<%=link_to "Search Books", "#offcanvasExample", data: {bs_toggle: "offcanvas"},
+ area: {controls: "offcanvasExample"},role: "button", class: "btn btn-primary btn-lg" %>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" style="color:#0965e6;" id="offcanvasExampleLabel">Search Books</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+   <%= search_form_for @q do |f|%>
+  <div style="width:100%;" class="form-group">
     
-    <%= f.text_field :title_cont, class: "form-control", placeholder: "Search"%>
+    <%= f.text_field :title_cont, class: "form-control", placeholder: "Search by Title"%></br>
       
     <%=f.submit 'Search books', class: "btn btn-primary" %>
   </div> 
  
 <%end%>
+    
+  </div>
+</div>
+
+
+
 
 <h1 style="color:#0965e6;">Books</h1>
 <%= paginate @books, params: {controller: 'books', action: 'index', data: {turbo: false}} %>
