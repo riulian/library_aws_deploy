@@ -1,7 +1,7 @@
 databases:
   - name: library
     databaseName: library_production
-    user: ilates@yahoo.com
+    user: iulian
 
 services:
   - type: web
