@@ -95,6 +95,13 @@ development:
 #  database: library_production
 #  username: library
 #  password: <%= ENV["LIBRARY_DATABASE_PASSWORD"] %>
+
+production:
+  <<: *default
+  database: library_production
+  username: library
+  password: <%= ENV["LIBRARY_DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
 test:
   <<: *default
   database: library_test
