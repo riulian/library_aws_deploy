@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+ 
   get 'home/index'
   get 'home/signup'
   get 'home/show'
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
   get 'books/my_rented_books'
   get 'books/all_rented_books'
   get 'books/search'
+  
   resources :books
   #devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -25,3 +27,4 @@ Rails.application.routes.draw do
   #end
   root "books#index"
 end
+#https://books-for-rent.herokuapp.com/

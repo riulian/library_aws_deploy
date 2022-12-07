@@ -1,10 +1,10 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-#ruby "3.1.2"
 
 
-ruby "3.0.4"
+
+ruby "3.1.3"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3", ">= 7.0.3.1"
@@ -67,3 +67,5 @@ gem 'devise', github: 'heartcombo/devise', branch: 'main'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
 gem 'kaminari', :git => 'https://github.com/kaminari/kaminari'
 gem 'ransack', :github => 'activerecord-hackery/ransack', :branch => 'main'
+gem 'redis', '~> 5.0', '>= 5.0.5'
+gem 'sidekiq', '~> 7.0'

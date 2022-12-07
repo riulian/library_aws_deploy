@@ -122,6 +122,7 @@ class BooksController < ApplicationController
       else
         BooksUser.where(book_id: book_params1[:book_id]).where(books_users: {status: "rented"}).update(status: "returned")
         @book.update(status: 2)
+        redirect_to books_return_a_book_path , notice: "Book returned!"
     end  
   end  
   
