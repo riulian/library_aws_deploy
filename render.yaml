@@ -16,4 +16,4 @@ services:
           name: library
           property: connectionString
       - key: RAILS_MASTER_KEY
-        sync: false 
+        sync: false
