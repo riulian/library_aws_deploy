@@ -112,4 +112,4 @@ test:
   encoding: unicode
   pool: 5
   username: postgres
-  password: 1
+  password: 1 
