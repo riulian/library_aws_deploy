@@ -17,5 +17,6 @@ services:
           property: connectionString
       #- key: RAILS_MASTER_KEY
       - key: 75a40fc2b0b83ef9082f9668396b25ec
+             
 
         sync: false
