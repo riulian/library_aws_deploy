@@ -1,6 +1,6 @@
 databases:
   - name: library
-    databaseName: library_production
+    databaseName: library_production_nakz
     user: iulian
 
 services:
