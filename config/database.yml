@@ -96,8 +96,15 @@ development:
 #  username: library
 #  password: <%= ENV["LIBRARY_DATABASE_PASSWORD"] %>
 
-
-  
+production:
+  adapter: postgresql
+  encoding: unicode
+  #<<: *default
+  #database: library_production
+  #username: library
+  #password: <%= ENV["LIBRARY_DATABASE_PASSWORD"] %>
+  #url: <%= ENV["DATABASE_URL"] %>
+  url: postgres://iulian:DihOqHZSig99qPiccDXcyhaBwFy6hEw0@dpg-ce930r2rrk00v7um9dc0-a.oregon-postgres.render.com/library_production_nakz_z04r
 test:
   <<: *default
   database: library_test
@@ -105,4 +112,4 @@ test:
   encoding: unicode
   pool: 5
   username: postgres
-  password: 1 
+  password: 1
