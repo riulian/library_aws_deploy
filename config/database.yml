@@ -102,7 +102,7 @@ production:
   #username: library
   #password: <%= ENV["LIBRARY_DATABASE_PASSWORD"] %>
   #url: <%= ENV["DATABASE_URL"] %>
-  url: postgres://iulian:etqa3pOEN35EXxZCrGEebDCoNfvbhef7@dpg-ce8gapkgqg46a85adljg-a.frankfurt-postgres.render.com/library_production
+  url: postgres://iulian:wY5s2iEsGRxQsYanJqC7omdbsfBPh1Do@dpg-ce8k7jen6mposnkoem30-a.frankfurt-postgres.render.com/library_production_nakz
 test:
   <<: *default
   database: library_test
