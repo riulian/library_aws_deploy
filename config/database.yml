@@ -97,11 +97,12 @@ development:
 #  password: <%= ENV["LIBRARY_DATABASE_PASSWORD"] %>
 
 production:
-  <<: *default
-  database: library_production
-  username: library
-  password: <%= ENV["LIBRARY_DATABASE_PASSWORD"] %>
-  url: <%= ENV["DATABASE_URL"] %>
+  #<<: *default
+  #database: library_production
+  #username: library
+  #password: <%= ENV["LIBRARY_DATABASE_PASSWORD"] %>
+  #url: <%= ENV["DATABASE_URL"] %>
+  url: postgres://iulian:etqa3pOEN35EXxZCrGEebDCoNfvbhef7@dpg-ce8gapkgqg46a85adljg-a.frankfurt-postgres.render.com/library_production
 test:
   <<: *default
   database: library_test
