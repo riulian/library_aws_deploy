@@ -1,6 +1,6 @@
 databases:
   - name: library
-    databaseName: library_production
+    databaseName: library_production_nakz
     user: iulian
 
 services:
@@ -9,12 +9,14 @@ services:
     env: ruby
     plan: Free   #aici am ales planul Free dar put alege si alte planuri gen Starter care este 7$
     buildCommand: "./bin/render-build.sh"
-    startCommand: bundle exec rails s
+    startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
-      - key: RAILS_MASTER_KEY
         fromDatabase:
-          name: postgres
-          property: connectionString           
+          name: library
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+      
+             
 
         sync: false
