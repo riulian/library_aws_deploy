@@ -97,6 +97,8 @@ development:
 #  password: <%= ENV["LIBRARY_DATABASE_PASSWORD"] %>
 
 production:
+  adapter: postgresql
+  encoding: unicode
   #<<: *default
   #database: library_production
   #username: library
