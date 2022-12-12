@@ -56,8 +56,8 @@ group :development do
   # gem "spring"
 end
 group :production do
-  #gem 'pg', '~> 1.4', '>= 1.4.3'   # activez asta daca vreau pe heroku si pun aceeasi versiune de pg si in productie pt ca altfel nu merge
-  #gem 'rails_12factor', '~> 0.0.3'
+  gem 'pg', '~> 1.4', '>= 1.4.3'   # activez asta daca vreau pe heroku si pun aceeasi versiune de pg si in productie pt ca altfel nu merge
+  gem 'rails_12factor', '~> 0.0.3'
 end
 gem 'devise', github: 'heartcombo/devise', branch: 'main'
 #gem 'faker', '~> 1.6', '>= 1.6.6'
